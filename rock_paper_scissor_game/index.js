@@ -37,14 +37,16 @@ function displayResult(playerChoice, computerChoice, result) {
     resultDiv.innerHTML = `You chose: ${playerChoice}<br>Computer chose: ${computerChoice}<br>${result}`;
 }
 
-function updateScores(winner) {
-    if (winner === "You Win!") {
+function updateScores(result) {
+    if (result === "You Win!") {
         playerWins++;
     }
-    if (winner === "You lose!") {
+    if (result === "You lose!") {
         computerWins++;
     }
 
     document.getElementById('playerWins').innerText = 'Player: ' + playerWins;
-    document.getElementById('computerWins').innerText = 'Computer: ' + computerWins;
+    document.getElementById('computerWins').innerText = 'Computer: ' + computerWins;  
 }
+
+console.log(playerWins);
