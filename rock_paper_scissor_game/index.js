@@ -48,9 +48,3 @@ function updateScores(winner) {
     document.getElementById('playerWins').innerText = 'Player: ' + playerWins;
     document.getElementById('computerWins').innerText = 'Computer: ' + computerWins;
 }
-
-function displayScore(playerWins, computerWins) {
-    console.log(playerWins);
-    console.log(computerWins)
-    
-}
