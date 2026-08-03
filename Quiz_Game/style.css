@@ -1,1 +1,82 @@
+/* Sizing note (default root 16px):
+   20px = 1.25rem
+   20px = 1.25em  (when parent font-size is also 16px)
+*/
+
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+:root {
+  /* Color scheme */
+  --bg-color: #fae1d6;
+  --bg-game-screen-color: #ffff;
+  --header-color: #f07b1c;
+
+  /* Font size */
+  --text-xs: 0.5rem; /* 10px — x small labels */
+  --text-s: 0.75rem; /* 15px - small labels */
+  --text-base: 1rem; /* 20px — paragraphs */
+  --text-lg: 1.25rem; /* 24px — lead / buttons */
+  --text-xl: 1.5rem; /* 30px — h2 */
+  --text-3xl: 3rem; /* 60px — h1 */
+}
+
+body {
+  background-color: var(--bg-color);
+  font-size: 42;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--bg-game-screen-color);
+  width: 600px;
+  height: 400px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.welcome-screen {
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  color: var(--header-color);
+  font-size: var(--text-2xl);
+}
+
+p {
+  font-size: var(--text-base);
+  font-weight: 800;
+}
+
+.btn {
+  background-color: #f07b1c;
+  height: 50px;
+  width: 150px;
+  border-radius: 12px;
+  border-color: #f07b1c;
+  color: var(--bg-game-screen-color);
+}
+
+.btn:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
